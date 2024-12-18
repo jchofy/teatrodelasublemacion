@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Vestir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Menú de inicio -->
+    <div id="menu-inicio">
+        <div id="info">
+            <div id="cerrar"><img id="cerrarAyuda" src="img/cerrar.png"></div>
+            <div id="cerrartexto">Claude Cahun y Marcel Moore fueron dos artistas queer de principios del siglo XX,
+                enlazadas con el surrealismo. Pasaron gran parte de sus vidas hablando sobre su identidad sexual y de
+                género, así como cuestionando el binarismo de género a través de la fotografía y la performance.
+                Todos performamos continuamente el género, con hábitos tan básicos como dejarnos barba si somos hombres,
+                como forma de reafirmar nuestro género y esa identidad social que buscamos reflejar en los ojos del
+                otro. Así, Claude Cahun buscó expresar el poco sentido que tenía esa asociación cultural del género,
+                explorando con el arte y la estética y creando confusión en la sociedad de su tiempo. Cuando
+                identificaban a Claude Cahun como mujer, la consideraban muy masculina, y cuando la identificaban como
+                hombre, la consideraban demasiado femenina.
+
+                Las dos artistas, que se conocieron en la infancia y acabaron siendo pareja, vivieron en una pequeña
+                isla de Francia, Jersey, que los nazis ocuparían en 1940.
+
+                Claude Cahun y Marcel Moore decidieron quedarse en la isla para el resto de sus vidas y, a través de la
+                performance y el arte que les había acompañado toda su vida, hicieron política y propaganda antinazi.
+                Llevando la idea de la estética como performance a su máximo punto, se disfrazaban y actuaban como
+                ancianas hermanas que vivían juntas. Mediante esta falsa identidad y la firma de "soldado anónimo",
+                repartieron panfletos en los coches, paredes y dejandole propaganda y mensajes antinazis en los paquetes de tabaco a los soldados más indecisos con la política nazi,
+                distribuyendo un total de cerca de 15,000 panfletos. Por ello, llevaban siempre a mano un bote de
+                barbitúricos para suicidarse en caso de ser capturadas.
+
+
+            </div>
+        </div>
+
+
+        <div id="btn-play-container" class="boton-imagen-container">
+            <img id="btn-play" class="boton-imagen" src="img/play_button.png" alt="Play Button">
+        </div>
+
+        <!-- Imagen 2 como botón -->
+
+        <div id="btn-play-container" class="boton-ayuda-imagen-container">
+            <img id="ayuda" src="img/pregunta2.png" alt="Botón 2" class="boton-imagen">
+        </div>
+
+        <audio id="miaudio">
+            <source src="audio/munecadepapel.mp3" type="audio/mpeg">
+            <source src="audio/munecadepapel.ogv" type="audio/ogg">
+            Tu navegador no es compatible con el audio HTML5.
+        </audio>
+    </div>
+
+    <!-- Pantalla del juego -->
+    <div id="pantalla-juego" class="oculto">
+        <!-- Columna Izquierda -->
+
+
+        <div class="columna izquierda">
+            <img src="img/armarioizquierdo.png" alt="Armario Izquierda" class="armario armarioizquierda">
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="columna derecha">
+            <img src="img/armarioderecho.png" alt="Armario Derecha" class="armario armarioderecha">
+        </div>
+
+        <div class="columna izquierda">
+
+            <!-- Cada prenda tiene un atributo alt único que representa su categoría -->
+            <img src="img/camisa_mujer.png" alt="camisa_mujer" class="ropa">
+            <img src="img/zapatos_mujer.png" alt="zapatos_mujer" class="ropa">
+            <img src="img/ropaseñora.png" alt="ropaseñora" class="ropa">
+        </div>
+        <div class="centro">
+
+            <!-- Área para la figura y las prendas seleccionadas -->
+            <div id="area-vestir">
+                <img src="img/figura.png" alt="Figura humana" id="figura">´
+                <img src="img/marco.png" alt="Marco" id="marco">
+                <div id="mensajeMArco">
+                    <p id="textonombre">Nazi</p>
+                </div>
+                <img src="img/volver.png" alt="Volver" id="volver" role="button" style="cursor: pointer;">
+                <img src="img/borrar.png" alt="Borrar" id="borrar" role="button" style="cursor: pointer;">
+                <div id="mensaje" style="display: none;"></div> <!-- Mensaje oculto al principio -->
+
+            </div>
+
+        </div>
+
+        <div class="columna derecha">
+
+                <img src="img/camisa_hombre.png" alt="camisa_hombre" class="ropa camisa_hombre">
+            <img src="img/peluca.png" alt="peluca" class="ropa">
+            <img src="img/mascara.png" alt="mascara" class="ropa">
+            <img src="img/gorrita.png" alt="gorrita" class="ropa">
+            <img src="img/zapatos_hombre.png" alt="zapatos_hombre" class="ropa">
+        </div>
+
+    </div>
+
+
+    <!-- Agrega el enlace al script aquí -->
+    <script src="script.js"></script>

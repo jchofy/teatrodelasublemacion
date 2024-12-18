@@ -1,0 +1,642 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* Usamos Flexbox para alinear los elementos en el centro de la pantalla */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    height: 100vh;
+    /* Hace que el cuerpo ocupe toda la altura de la ventana */
+    background-color: #f0f0f0;
+    /* Fondo gris claro */
+}
+
+#cerrartexto {
+    padding: 20px;
+    line-height: 1.5;
+    font-family: 'Press Start 2P', cursive;
+    /* Aplica la misma fuente */
+    font-size: 10px;
+}
+
+#textonombre {
+    font-size: 9px; /* Cambia el tamaño a lo que necesites */
+   margin-top: 12px;
+margin-left: 13px;
+}
+#cerrar {
+    line-height: 1.3;
+    display: flex;
+    justify-content: end;
+    margin-right: 5%;
+    margin-top: 20px;
+
+}
+
+#cerrar img {
+    width: 5%;
+}
+
+#cerrar img:hover {
+    transform: scale(1.2);
+}
+
+#info {
+    display: none;
+    background-color: gray;
+    border-radius: 10px;
+   
+    color: white;
+    width: 80%;
+    height: 70vh;
+    z-index: 3;
+}
+
+#menu-inicio {
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    /* Organiza los elementos del menú en una columna */
+    justify-content: center;
+    /* Centra los elementos dentro del contenedor */
+    align-items: center;
+    /* Ocupa toda la altura disponible */
+    background-color: #fff;
+    /* Fondo blanco */
+    background-image: url('img/fondo.jpg');
+    /* Imagen de fondo */
+    background-size: cover;
+    /* Ajusta la imagen para que encaje sin distorsionarse */
+    background-position: center;
+    /* Centra la imagen de fondo */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+    border: 2px solid #ccc;
+    /* Borde sutil alrededor del contenedor */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para dar profundidad */
+    /* Alinea los elementos en el centro */
+    max-width: 892px;
+    min-width: 892px;
+    max-height: 947px;
+    min-height: 947px;
+
+}
+
+.armario {
+    width: 1500%;
+    /* Cambia al 100% del ancho de la columna */
+    height: auto;
+    /* Mantén la proporción de la imagen */
+    margin: 0 auto;
+    /* Centra la imagen horizontalmente */
+    display: block;
+}
+
+.armarioizquierda {
+    position: relative;
+    margin-left: -120%;
+    margin-top: -80%;
+    /* Si necesitas espacio extra debajo del armario izquierdo */
+}
+
+.armarioderecha {
+    position: relative;
+    margin-top: -80%;
+    /* Si necesitas espacio extra encima del armario derecho */
+    margin-left: 300%
+}
+
+.containerr {
+    position: absolute;
+    /* Cambia de relative a absolute si quieres moverlo respecto al viewport o al padre más cercano con position */
+    top: 2%;
+    /* Ajusta el valor según lo que necesites */
+    left: 43%;
+    /* Ajusta el valor según lo que necesites */
+
+}
+
+.boton-ayuda-imagen-container {
+    position: relative;
+    display: inline-block;
+    /* Hace que el contenedor sea un bloque en línea */
+    cursor: pointer;
+    /* Cambia el cursor a mano para indicar que se puede hacer clic */
+    width: 1000px;
+    /* Ancho fijo para la imagen */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    top: -400px;
+    /* Desplaza la imagen hacia arriba */
+    left: 50px;
+    /* Desplaza la imagen hacia la izquierda */
+
+    margin-top: -60px;
+    /* Ajusta el margen superior para posicionar mejor la imagen */
+}
+
+.boton-imagen-container {
+    position: relative;
+    display: inline-block;
+    /* Hace que el contenedor sea un bloque en línea */
+    cursor: pointer;
+    /* Cambia el cursor a mano para indicar que se puede hacer clic */
+    width: 1000px;
+    /* Ancho fijo para la imagen */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    top: -400px;
+    /* Desplaza la imagen hacia arriba */
+    left: 50px;
+    /* Desplaza la imagen hacia la izquierda */
+
+    margin-top: -60px;
+    /* Ajusta el margen superior para posicionar mejor la imagen */
+}
+
+/* Este contenedor es el área del botón de "Play" (inicio del juego). */
+
+
+
+.boton-imagen {
+    position: absolute;
+    width: 260px;
+    /* Tamaño inicial de la imagen del botón */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el ratón */
+    transition: transform 0.3s ease;
+    /* Suaviza la transición al mover la imagen */
+}
+
+
+
+/* Este bloque es para la imagen del botón "Play" con el efecto de hover (al pasar el ratón). */
+
+.boton-imagen:nth-of-type(1) {
+    top: 0%;
+    /* Coloca la primera imagen del botón en la parte superior */
+    left: 25%;
+    /* Coloca la primera imagen en el 25% de la izquierda */
+}
+
+#ayuda {
+    width: 210px;
+    position: absolute;
+    top: 78px;
+    left: 367px;
+}
+
+
+.boton-imagen:nth-of-type(2) {
+    top: 50%;
+    /* Coloca la segunda imagen en la mitad de la pantalla */
+    left: 60%;
+    /* Coloca la segunda imagen en el 60% desde la izquierda */
+}
+
+#btn-play {
+
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    /* margin-top: 10%; */
+    margin-left: -15%;
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 723px
+}
+
+#btn-play:hover {
+    animation: parpadeo 0.2s infinite;
+    /* Aplica la animación "parpadeo" al pasar el ratón */
+}
+
+
+#ayuda:hover {
+    transform: translateX(10px);
+    animation: parpadeo 0.2s infinite;
+    /* Aplica la animación "parpadeo" al pasar el ratón */
+}
+
+@keyframes parpadeo {
+
+    0%,
+    50% {
+        opacity: 1;
+        /* Totalmente visible */
+    }
+
+    50% {
+        opacity: 0;
+        /* Totalmente invisible */
+    }
+}
+
+#pantalla-juego {
+    display: none;
+    /* Oculta la pantalla del juego al inicio */
+    max-width: 892px;
+    min-width: 892px;
+    max-height: 947px;
+    min-height: 947px;
+    /* El área del juego ocupa el 60% de la pantalla */
+    background-color: #D3D3D3;
+    /* Fondo gris claro */
+    height: 110%;
+    /* El área del juego ocupa el 110% de la altura de la pantalla */
+    justify-content: space-between;
+    /* Acomoda los elementos con espacio entre ellos */
+    align-items: center;
+    /* Centra los elementos verticalmente */
+}
+
+#area-vestir {
+    position: relative;
+    /* Posiciona las prendas de manera absoluta dentro de este contenedor */
+    width: 300px;
+    /* Establece el tamaño del área de vestir */
+    height: 300px;
+    margin: auto;
+    /* Centra el área de vestir */
+}
+
+#figura {
+    position: absolute;
+    /* Posiciona la figura de manera absoluta dentro del área de vestir */
+    top: 40%;
+    /* Coloca la figura al 40% desde la parte superior */
+    left: 50%;
+    /* Coloca la figura al 50% desde la izquierda */
+    transform: translate(-50%, -50%);
+    /* Centra la figura sobre el área */
+    width: 150%;
+    /* Aumenta el tamaño de la figura */
+    height: auto;
+    margin-left: -45%;
+}
+
+/* Este bloque es para posicionar la figura humana dentro del área de vestir. */
+#marco {
+    position: absolute;
+    top: 392px;
+    /* Coloca el marco en la parte inferior de la figura */
+    left: 8%;
+    transform: translateX(-50%);
+    /* Centra el marco horizontalmente */
+    width: 140%;
+    /* Ajusta el tamaño del marco según sea necesario */
+    height: auto;
+    z-index: 1;
+    /* Coloca el marco debajo de la figura */
+}
+
+#mensajeMArco {
+    position: absolute;
+    top: 407px;
+    left: -164px;
+    z-index: 1;
+    font-size: 9pt;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+#volver {
+    position: absolute;
+    top: -45%;
+    /* Coloca el marco en la parte inferior de la figura */
+    left: -40%;
+    transform: translateX(-50%);
+    /* Centra el marco horizontalmente */
+    width: 40%;
+    /* Ajusta el tamaño del marco según sea necesario */
+    height: auto;
+    z-index: 6;
+    /* Coloca el marco debajo de la figura */
+}
+#volver:hover {
+    transform: translateX(-50%) scale(1.2); /* Escalar el tamaño al 120% */
+    filter: brightness(1.2); /* Aumentar el brillo */
+    cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+}
+
+#borrar {
+    position: absolute;
+    top: -45%;
+    /* Coloca el marco en la parte inferior de la figura */
+    left: 55%;
+    transform: translateX(-50%);
+    /* Centra el marco horizontalmente */
+    width: 40%;
+    /* Ajusta el tamaño del marco según sea necesario */
+    height: auto;
+    z-index: 6;
+    /* Coloca el marco debajo de la figura */
+}
+/* Efecto al pasar el ratón sobre el botón */
+#borrar:hover {
+    transform: translateX(-50%) scale(1.2); /* Escalar el tamaño al 120% */
+    filter: brightness(1.2); /* Aumentar el brillo */
+    cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+}
+.ropa {
+    width: 600%;
+    /* Tamaño de las prendas es 3 veces el tamaño del área */
+    height: auto;
+    /* Mantiene la proporción de las imágenes de las prendas */
+    margin: 0px;
+    /* Elimina el margen de las prendas */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el ratón */
+    transition: transform 0.3s ease;
+    /* Transición suave al mover la prenda */
+    margin-top: -80%;
+    /* Ajusta la posición vertical de las prendas */
+}
+
+.ropa[src*="mascara.png"] {
+    position: relative;
+    /* Usamos absolute para posicionarla respecto a su contenedor */
+    top: -85px;
+    /* Mueve la imagen hacia arriba */
+    width: 150%;
+    /* Centra la imagen horizontalmente */
+
+    /* Asegura que se mantenga centrada */
+}
+
+.ropa[src*="gorrita.png"] {
+    position: relative;
+    /* Usamos absolute para posicionarla respecto a su contenedor */
+    top: -85px;
+    /* Mueve la imagen hacia arriba */
+
+
+
+    /* Centra la imagen horizontalmente */
+    /* Asegura que se mantenga centrada */
+}
+
+
+.ropa[src*="ropaseñora.png"] {
+
+    position: relative;
+    /* Usamos absolute para posicionarla respecto a su contenedor */
+    top: -159px;
+    /* Mueve la imagen hacia arriba */
+    /* Centra la imagen horizontalmente */
+    /* Asegura que se mantenga centrada */
+}
+
+.ropa[src*="peluca.png"] {
+    width: 200%;
+    position: relative;
+    /* Usamos absolute para posicionarla respecto a su contenedor */
+    top: -75px;
+    /* Mueve la imagen hacia arriba */
+    /* Centra la imagen horizontalmente */
+    /* Asegura que se mantenga centrada */
+}
+
+.ropa[src*="camisa_hombre.png"] {
+
+    /* Usamos absolute para posicionarla respecto a su contenedor */
+    top: -15px;
+    /* Mueve la imagen hacia arriba */
+    /* Centra la imagen horizontalmente */
+    /* Asegura que se mantenga centrada */
+}
+
+.ropa:hover {
+    transform: scale(1.5);
+    /* Cambié de scale(2) a scale(1.5) para hacerlo más manejable */
+}
+
+
+.ropa[src*="zapatos_mujer.png"] {
+    position: relative;
+    width: 250%;
+    top: 238px;
+    /* Ajusta la posición vertical de los zapatos de mujer */
+}
+
+
+
+.ropa[src*="zapatos_hombre.png"] {
+    position: relative;
+    width: 250%;
+    top: -385px;
+    /* Ajusta la posición vertical de los zapatos de hombre */
+}
+#textonombre {
+  display: none;
+}
+
+
+/* Agrupar las imágenes dentro de un contenedor común */
+
+.prenda-colocada {
+    position: absolute;
+    /* Posiciona la prenda de manera absoluta sobre la figura */
+    top: 40%;
+    /* Coloca la prenda al 40% desde la parte superior */
+    left: 5%;
+    /* Coloca la prenda al 50% desde la izquierda */
+    transform: translate(-50%, -50%);
+    /* Centra la prenda sobre la figura */
+    width: 150%;
+    height: auto;
+z_index:5;
+    pointer-events: none;
+    /* Desactiva los eventos de puntero (como hover) sobre las prendas colocadas */
+}
+
+
+/* Estilo para las prendas que ya han sido colocadas sobre la figura. */
+
+.prenda-colocada[src*="camisa_hombre.png"] {
+
+z_index:5;
+}
+.prenda-colocada {
+    position: absolute;  /* Establecer posición absoluta */
+    z-index: 10;         /* Valor por defecto, para otras prendas */
+}
+
+.camisa-colocada {
+    z-index: 20;  /* Camisa siempre por encima de otras prendas */
+}
+
+.prenda-colocada[src*="zapatos_hombre.png"] {
+    position: absolute;
+    top: 93%;
+    /* Ajusta la posición de los zapatos de hombre */
+    left: 5%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: auto;
+z_index:1;
+}
+
+.prenda-colocada[src*="mascara.png"] {
+    position: absolute;
+    top: -61%;
+    /* Ajusta la posición de los zapatos de mujer */
+    left: 6%;
+    transform: translateX(-50%);
+    width: 42%;
+    height: auto;
+}
+
+.prenda-colocada[src*="zapatos_mujer.png"] {
+    position: absolute;
+    top: 94%;
+    /* Ajusta la posición de los zapatos de mujer */
+    left: 6%;
+    transform: translateX(-50%);
+    width: 70%;
+z_index:1;
+    height: auto;
+}
+
+.prenda-colocada[src*="peluca.png"] {
+    position: absolute;
+    top: -65%;
+    /* Ajusta la posición de los zapatos de mujer */
+    left: 7%;
+    transform: translateX(-50%);
+    width: 32%;
+    height: auto;
+}
+
+
+
+.columna.izquierda {
+
+    width: 20%;
+    /* Establece el 20% del ancho para la columna izquierda */
+    display: flex;
+    /* Usa Flexbox para organizar las prendas en la columna */
+    flex-direction: column;
+    /* Organiza las prendas en una columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    /* Espacio entre las prendas */
+    padding: 10px;
+    /* Añade relleno alrededor */
+    max-height: 90vh;
+    /* Establece una altura máxima para la columna */
+    margin-left: 10%;
+    /* Desplaza la columna hacia la derecha */
+}
+
+.columna.izquierda .ropa {
+    position: relative;
+    margin-left: -1400%;
+    /* Ajusta este valor para mover la imagen más a la izquierda */
+    margin-top: 26%;
+}
+
+.camisa_hombre {
+    margin-top: 50px;
+}
+
+.columna.derecha {
+    width: 20%;
+    /* Establece el 20% del ancho para la columna izquierda */
+    display: flex;
+    gap: 4em;
+    /* Usa Flexbox para organizar las prendas en la columna */
+    flex-direction: column;
+    /* Organiza las prendas en una columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    /* Espacio entre las prendas */
+    padding: 10px;
+    /* Añade relleno alrededor */
+    max-height: 90vh;
+    /* Establece una altura máxima para la columna */
+    margin-right: 10%;
+    /* Desplaza la columna hacia la derecha */
+}
+
+/* Las columnas de la izquierda y derecha contienen las prendas que pueden ser seleccionadas. */
+.columna.derecha .ropa {
+    position: relative;
+    /* Permite mover el elemento desde su posición original */
+    margin-left: -150%;
+    /* Mueve las imágenes hacia la izquierda */
+
+}
+
+.centro {
+    width: 60%;
+    /* Establece el 60% del ancho para el área central */
+    display: flex;
+    /* Usa Flexbox para organizar los elementos dentro */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    align-items: center;
+    /* Centra los elementos verticalmente */
+}
+
+
+
+#area-vestir {
+    position: relative;
+}
+
+#mensaje {
+    line-height: 1.3;
+    margin-top: 417px;
+  margin-left:6px;
+    /* Mantén la posición fija */
+    min-height: 3.125em;
+    /* Altura mínima */
+    max-height: 12.5em;
+    /* Altura máxima */
+    position: fixed;
+    /* Fijar posición para evitar desplazamiento */
+    left: 50%;
+    /* Centrar horizontalmente */
+    transform: translateX(-50%);
+    /* Ajustar centrado */
+    color: black;
+    padding: 1.25em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5em;
+    /* Tamaño de fuente */
+    text-align: left;
+    width: 60%;
+    /* Ancho fijo */
+    max-width: 38em;
+    z-index: 3;
+    /* Asegurar que esté por encima de otros elementos */
+    word-wrap: break-word;
+    overflow-y: auto;
+    /* Permite desplazamiento interno del texto */
+}
+
+#mensaje p {
+    margin: 0;
+    padding: 8px 0;
+    line-height: -1.9em;
+    /* Espaciado entre líneas */
+    margin-bottom: 1.9em;
+    /* Espaciado entre párrafos */
+}
+#textonombre {
+    display: none;
+}
+
+
+.oculto {
+    display: none;
+    /* Oculta el elemento con esta clase */
+}
